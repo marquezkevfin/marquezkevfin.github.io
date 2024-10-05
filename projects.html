@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Projects Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="static\style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">             
+              
+              <li class="nav-item dropdown">
+                <a  id="goToProjects" class="nav-link dropdown-toggle" href="./projects.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./screener.html">Screener</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./atdataset.html">Autotrader dataset</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./portfolio.html">Portfolio</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"> </li>
+                <a class="nav-link" href="static\images\kevin-marquez-resume.pdf">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a id="goToHome" class="nav-link" aria-current="page" href="./index.html">Home</a>
+              </li> 
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container text-blue">
+        <div style="height: 10vh;"></div>
+        <div class="display-4"> Projects Page</div>
+        <div class="row m-1">
+            <div class="col-xl-3 col-md-4 p-0">
+                <div class="card-thumbnail p-2 m-2">
+                    <image class="card-img-top" src="static\images\YF_stock_screener.PNG" alt="project thumbnail"> 
+                        <div class="card-body">
+                            <h4 class="card-title">Yahoo Finance Stock Screener</h4>
+                            <p>I have always been interested in the capital markets and recognize the need for various analysis tools with automated functions that 
+                                can make analysis more efficient. I set out to create a tool in Excel that uses the historical data provided by Yahoo Finance. 
+                                This personal project enhanced my Excel skills and introduced me to the use of Power Query, Macros and VBA for automating and 
+                                programming tasks in Excel</p>
+                            <a id="goToScreener" class="stretched-link" href="./screener.html"></a>
+                        </div>              
+                </div>
+                           
+            </div>
+            <div class="col-xl-3 col-md-4 p-0">
+                <div class="card-thumbnail p-2 m-2">
+                    <image class="card-img-top" src="static\images\at_dashboard.PNG" alt="project thumbnail">
+                        <div class="card-body">
+                            <h4 class="card-title">Autotrader Canada Sales Dataset</h4>
+                            <p>I was interested in building a tool to analyze the prices of cars from each brand and how they depreciate over the years and given the mileage.
+                                This project further enhanced my Excel skills in working with large amounts of data with over 300,000 rows of entry and the 
+                                use of pivot tables to visualize large datasets.
+                            </p>
+                            <a id="goToAtdataset" class="stretched-link" href="./atdataset.html"></a>
+                        </div>
+                </div>            
+            </div>
+            <div class="col-xl-3 col-md-4 p-0">
+                <div class="card-thumbnail p-2 m-2">
+                    <image class="card-img-top" src="static\images\2fa_over_time.PNG" alt="project thumbnail">
+                        <div class="card-body">
+                            <h4 class="card-title">Portfolio Construction Project</h4>
+                            <p>Taking a Portfolio Management course in my fourth year provided me with an encompassing knowledge of the discipline
+                                of portfolio management including minimizing risk, maximizing risk-adjusted returns,
+                                constructing a portfolio and benchmark, and analyzing the source of returns. All of this knowledge was put into practical use
+                                for our final project which involved constructing a portfolio of 15 stocks, creating a benchmark in which we compare our portfolio returns against,
+                                and using 2-factor brinson attribution to analyze the source of excess returns. We were also provided with Excel templates that will allow us to 
+                                replicate these steps and construct different portfolios.
+                            </p>
+                            <a id="goToPortfolio" class="stretched-link" href="./portfolio.html"></a>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+    
+      </div>
+    <script>
+      $('.dropdown-toggle').on('click',function(e){
+        var link = $(this).attr('href');
+        if(link){
+          window.location.href = link;
+        }
+      });
+      document.getElementById("goToProjects").addEventListener("click", function(){
+        window.location.href = "\projects.html";
+      });
+      document.getElementById("goToHome").addEventListener("click", function(){
+        window.location.href = "\index.html";
+      });
+      document.getElementById("goToScreener").addEventListener("click", function(){
+        window.location.href = "\screener.html";
+      });
+      document.getElementById("goToAtdataset").addEventListener("click", function(){
+        window.location.href = "\atdataset.html";
+      });
+      document.getElementById("goToPortfolio").addEventListener("click", function(){
+        window.location.href = "\portfolio.html";
+      });
+
+    </script>
+</body>
+</html>

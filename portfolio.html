@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Portfolio Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="static\style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">             
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="./projects.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./screener.html">Screener</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./atdataset.html">Autotrader dataset</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./portfolio.html">Portfolio</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"> </li>
+                <a class="nav-link" href="static\images\kevin-marquez-resume.pdf">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+              </li> 
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container text-blue">   
+      <div class="row m-1">
+          <div class="project-content">
+              <div class="project-container" style="width: 960px; height: 600px; padding: 20px; margin: 20px; border: 20px; position: relative;">
+                  <h1>Portfolio Construction Project</h1>
+                  <image class="card-img-top" src="static\images\2fa_over_time.PNG" alt="project thumbnail">
+                  <div class="card-body">
+                      <p>Chart retrieved from FactSet showing the selection and allocation effect of the constructed portfolio of 15 stocks. 
+                      </p>
+                  </div>
+                  <div style="height: 5vh;"></div>
+                  <image class="card-img-top" src="static\images\2fba.PNG" alt="project thumbnail">
+                      <div class="card-body">
+                          <p>2-factor brinson attribution analysis of excess returns of the portfolio against the constructed benchmark. 
+                              due to the concentrated nature of the portfolio of 15 stocks within 4 sectors, it was able to generate a total excess
+                              return of 3.2664 or 326.64% over the 5 year period over the benchmark. 
+                          </p>
+                          <p>
+                              Analysis of Allocation, Selection, and Interaction effect shows that Interaction effect was responsible for most of the 
+                              excess returns at 252.83%. 
+                          </p>
+                  </div>
+                  <div style="height: 5vh;"></div>
+                  <image class="card-img-top" src="static\images\style_identification.PNG" alt="project thumbnail">
+                      <div class="card-body">
+                          <p>Analyzing the monthly returns of the portfolio compared to the benchmark of the 4 selected ETFS over 5 years. 
+                              Using regression analysis finds that the portfolio is most closely correlated with the S&P500 ETF.
+                          </p>
+                      </div>  
+  
+              </div>
+              
+              
+          </div>
+          
+  
+      </div>
+      
+  </div>
+    <script>
+        $('.dropdown-toggle').on('click',function(e){
+          var link = $(this).attr('href');
+          if(link){
+            window.location.href = link;
+          }
+        });
+        document.getElementById("goToProjects").addEventListener("click", function(){
+          window.location.href = "\projects.html";
+        });
+        document.getElementById("goToHome").addEventListener("click", function(){
+          window.location.href = "\index.html";
+        });
+        document.getElementById("goToScreener").addEventListener("click", function(){
+          window.location.href = "\screener.html";
+        });
+        document.getElementById("goToAtdataset").addEventListener("click", function(){
+          window.location.href = "\atdataset.html";
+        });
+        document.getElementById("goToPortfolio").addEventListener("click", function(){
+          window.location.href = "\portfolio.html";
+        });
+  
+      </script>
+    
+</body>
+</html>
