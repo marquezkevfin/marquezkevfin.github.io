@@ -27,6 +27,9 @@
                   <li><a class="dropdown-item" href="./atdataset.html">Autotrader dataset</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="./portfolio.html">Portfolio</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a id="goToVolumeScreener" class="dropdown-item" href="./volumescreener.html">Google Finance Volume Screener Tool</a></li>
+
                 </ul>
               </li>
               <li class="nav-item"> </li>
@@ -110,9 +113,12 @@
         document.getElementById("goToPortfolio").addEventListener("click", function(){
           window.location.href = "\portfolio.html";
         });
-  
+        document.getElementById("goToVolumeScreener").addEventListener("click", function(){
+          window.location.href = "\volumescreener.html";
+      });
       </script>
     
 </body>
 
 </html>
+
