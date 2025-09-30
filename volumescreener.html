@@ -54,22 +54,20 @@
                       <p>Dashboard page for Google Finance Volume Screener Tool</p>
                   </div>
                   <div style="height: 5vh;"></div>
-                  <image class="card-img-top" src="static\images\YF_stock_screener_vba_1.PNG" alt="project thumbnail">
+                  <image class="card-img-top" src="static\images\volscreener_sp500.png" alt="project thumbnail">
                       <div class="card-body">
-                          <p>VBA code that takes the download link from Yahoo Finance as a text query, and edits the link to match the ticker 
-                              and date range from the dashboard.</p>
+                          <p>This page displays relevant data of stocks listed in the S&P500.</p>
+                          <p>The function =Average(index(GOOGLEFINANCE($A2,"volume",WORKDAY(today(),-5),today()-1),,2)) calculates the average volume
+                          of the previous 5 trading days. The vol/volavg(5td) divides the volume of the current day to the average volume of the 5 previous trading days and
+                          gives a ratio.</p>
                   </div>
                   <div style="height: 5vh;"></div>
-                  <image class="card-img-top" src="static\images\YF_stock_screener_vba_2.PNG" alt="project thumbnail">
+                  <image class="card-img-top" src="static\images\volscreener_sp500_datafilter.png" alt="project thumbnail">
                       <div class="card-body">
-                          <p>VBA function that sorting the historical data to most recent first, and grabs the minimum, maximum, and current price.</p>
-                  </div>
-                  <div style="height: 5vh;"></div>
-                  <image class="card-img-top" src="static\images\YF_stock_screener_vba_3.PNG" alt="project thumbnail">
-                      <div class="card-body">
-                          <p>dynamic_y() automatically adjusts the Y-axis of historical price chart to the given range of the stock price and makes the chart visually readable.</p>
-                          <p>set_range() adjusts the start and end date to match the date range from the dashboard.</p>
-                  </div>
+                          <p>Data filter page for S&P500.</p>
+                          <p>The function =FILTER('SP500' !A:A, 'SP500' !$K:$K>=1.9) selects the stocks in the SP500 page that has 
+                          a vol/volavg greater than 1.9. In other words, the function selects stocks that has seen a sudden spike in volume
+                          compared to the volume for the five previous trading days. </p>
   
               </div>
                               
